@@ -114,7 +114,9 @@ public class QuizActivity extends AppCompatActivity {
         savedInstanceState.putInt(KEY_INDEX, mCurrentIndex);
     }
 
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if(resultCode != Activity.RESULT_OK) {return;}
         if(requestCode == REQUEST_CODE_CHEAT) {
             if(data == null) {return;}
